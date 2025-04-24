@@ -263,7 +263,7 @@ resource "consul_config_entry" "exported_services" {
 
 ```hcl
 resource "consul_config_entry" "mesh" {
-	name      = "mesh"
+	name      = "mesh"   #This argument field should be removed, as it doesn't align with Consul CRD, as no `name` field is present in it. Ref. https://developer.hashicorp.com/consul/docs/connect/config-entries/mesh#available-fields
 	kind      = "mesh"
   partition = "default"
 
